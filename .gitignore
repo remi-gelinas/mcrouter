@@ -1,0 +1,21 @@
+# Nix
+result
+\#*.*\#
+
+# Direnv
+.direnv
+.env
+
+# pre-commit.nix
+.pre-commit-config.yaml
+
+# Emacs backup files
+*.*~
+
+# LSP
+.lsp
+.clj-kondo
+
+# General
+.DS_Store
+*.dump

@@ -1,0 +1,16 @@
+--- old/fizz/CMakeLists.txt	2023-08-07 13:55:38
++++ new/fizz/CMakeLists.txt	2023-08-07 13:56:00
+@@ -330,12 +330,6 @@
+         FILE fizz-targets.cmake
+         NAMESPACE fizz::
+         DESTINATION ${CMAKE_INSTALL_DIR})
+-
+-IF(CMAKE_CROSSCOMPILING)
+-   option(BUILD_TESTS "BUILD_TESTS" OFF)
+-ELSE(CMAKE_CROSSCOMPILING)
+-   option(BUILD_TESTS "BUILD_TESTS" ON)
+-ENDIF(CMAKE_CROSSCOMPILING)
+ 
+ SET(FIZZ_TEST_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
+ 
+\ No newline at end of file

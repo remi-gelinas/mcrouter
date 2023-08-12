@@ -1,0 +1,23 @@
+[mcrouter]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebook/mcrouter"
+
+[fizz]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebookincubator/fizz"
+
+[folly]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebook/folly"
+
+[wangle]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebook/wangle"
+
+[mvfst]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebook/mvfst"
+
+[fbthrift]
+src.manual = "v2023.08.07.00"
+fetch.github = "facebook/fbthrift"

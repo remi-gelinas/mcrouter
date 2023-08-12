@@ -1,0 +1,122 @@
+{
+    "fbthrift": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fbthrift",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebook",
+            "repo": "fbthrift",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-99wYSiEzSJu8unE4tAMg4161cXHZvP93uOfofWircvs=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    },
+    "fizz": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fizz",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebookincubator",
+            "repo": "fizz",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-ijrCdkR5EqprFQSD+fxPK4XR2EjOXpuntH/HbTf8LvM=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    },
+    "folly": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "folly",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebook",
+            "repo": "folly",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-4H30yGD9Z4VsqGhOtFS7mpY6RUuUFpLidH61A8ETqzg=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    },
+    "mcrouter": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mcrouter",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebook",
+            "repo": "mcrouter",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-+8Dcj1X9OC5wbHkvqC6ahrcfALpg7sUYkoJnpOTG4M0=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    },
+    "mvfst": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mvfst",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebook",
+            "repo": "mvfst",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-tLpLXQdJBec+9EN7c3bj1vniXVM3iicBTfP3QDIjPiQ=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    },
+    "wangle": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "wangle",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "facebook",
+            "repo": "wangle",
+            "rev": "v2023.08.07.00",
+            "sha256": "sha256-giiqo0MMvlNCJnM/lIRQ8CoCHELOZazj4LB9HXt8Svc=",
+            "type": "github"
+        },
+        "version": "v2023.08.07.00"
+    }
+}

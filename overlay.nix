@@ -117,5 +117,5 @@ final: prev: {
   });
 
   mvfst = final.callPackage packages/mvfst.nix {source = final.sources.mvfst;};
-  mcrouter = final.callPackage packages/mcrouter.nix {source = final.sources.mcrouter;};
+  mcrouter = final.callPackage packages/mcrouter {source = final.sources.mcrouter;};
 }

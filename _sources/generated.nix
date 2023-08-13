@@ -5,6 +5,28 @@
   fetchFromGitHub,
   dockerTools,
 }: {
+  alpine-aarch64-linux = {
+    pname = "alpine-aarch64-linux";
+    version = "3.18.3";
+    src = dockerTools.pullImage {
+      imageName = "library/alpine";
+      imageDigest = "sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a";
+      sha256 = "sha256-UMizyCBsYy7Lpa7U4VocNOtm7QGYOYvcTIkWj6V4bvc=";
+      finalImageTag = "3.18.3";
+      arch = "arm64";
+    };
+  };
+  alpine-x86_64-linux = {
+    pname = "alpine-x86_64-linux";
+    version = "3.18.3";
+    src = dockerTools.pullImage {
+      imageName = "library/alpine";
+      imageDigest = "sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a";
+      sha256 = "sha256-3K73rB1MoF/co3J61jvGPacxClxswsNAdQ2wDvlZLIs=";
+      finalImageTag = "3.18.3";
+      arch = "amd64";
+    };
+  };
   fbthrift = {
     pname = "fbthrift";
     version = "v2023.08.07.00";

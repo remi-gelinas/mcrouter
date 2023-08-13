@@ -1,4 +1,44 @@
 {
+    "alpine-aarch64-linux": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "alpine-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": "arm64",
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a",
+            "imageName": "library/alpine",
+            "imageTag": "3.18.3",
+            "os": null,
+            "sha256": "sha256-UMizyCBsYy7Lpa7U4VocNOtm7QGYOYvcTIkWj6V4bvc=",
+            "tlsVerify": null
+        },
+        "version": "3.18.3"
+    },
+    "alpine-x86_64-linux": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "alpine-x86_64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": "amd64",
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a",
+            "imageName": "library/alpine",
+            "imageTag": "3.18.3",
+            "os": null,
+            "sha256": "sha256-3K73rB1MoF/co3J61jvGPacxClxswsNAdQ2wDvlZLIs=",
+            "tlsVerify": null
+        },
+        "version": "3.18.3"
+    },
     "fbthrift": {
         "cargoLocks": null,
         "date": null,

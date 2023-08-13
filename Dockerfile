@@ -26,7 +26,6 @@ RUN cachix use ${CACHE_NAME}
 COPY . ${WORKDIR}
 
 FROM base as package
-
 RUN nix build -L .#${PACKAGE_NAME}
 
 FROM package as cache_package

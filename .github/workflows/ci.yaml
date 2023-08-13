@@ -88,13 +88,24 @@ jobs:
           - linux/arm64
     steps:
       - uses: actions/checkout@v3.5.3
+      - name: Expose Github Runtime
+        uses: crazy-max/ghaction-github-runtime@v2
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v2
+        with:
+          platforms: ${{ matrix.platform }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+        with:
+          platforms: ${{ matrix.platform }}
+          driver-opts:
+            env.BUILDKIT_STEP_LOG_MAX_SIZE=20971520
       - uses: actions/checkout@v3.5.3
-      - run: |
+      - name: Build package
+        run: |
           cachix_token=${{ secrets.CACHIX_AUTH_TOKEN }} docker buildx build \
+            --cache-to type=gha,mode=max \
+            --cache-from type=gha \
             --secret id=cachix_token \
             --platform=${{ matrix.platform }} \
             --build-arg CACHE_NAME=${{ env.CACHIX_CACHE_NAME }} \

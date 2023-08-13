@@ -3,7 +3,6 @@ FROM nixos/nix:latest as base
 
 ARG CACHE_NAME
 ARG CACHIX_VERSION=v1.6
-ARG PACKAGE_NAME
 ARG WORKDIR=/wrk
 
 WORKDIR ${WORKDIR}
@@ -26,7 +25,8 @@ RUN cachix use ${CACHE_NAME}
 COPY . ${WORKDIR}
 
 FROM base as package
-RUN nix build -L .#${PACKAGE_NAME}
+ARG ATTRIBUTE
+RUN nix build -L .#${ATTRIBUTE}
 
 FROM package as cache_package
 RUN --mount=type=secret,id=cachix_token \

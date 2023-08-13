@@ -86,7 +86,8 @@ jobs:
         with:
           send-statistics: false
 
-  folly:
+  # Jobs are split up to avoid the 6 hour job timeout
+  fbthrift:
     needs: set-env
     strategy:
       fail-fast: false
@@ -98,6 +99,22 @@ jobs:
     with:
       cacheName: ${{ needs.set-env.outputs.CACHIX_CACHE_NAME }}
       platform: ${{ matrix.platform }}
-      attribute: folly
+      attribute: fbthrift
+    secrets:
+      cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+
+  mcrouter:
+    needs: fbthrift
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm64
+    uses: ./.github/workflows/build_attribute.yaml
+    with:
+      cacheName: ${{ needs.set-env.outputs.CACHIX_CACHE_NAME }}
+      platform: ${{ matrix.platform }}
+      attribute: mcrouter
     secrets:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}

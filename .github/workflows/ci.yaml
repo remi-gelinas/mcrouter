@@ -100,7 +100,7 @@ jobs:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
   fizz:
-    needs: set-env
+    needs: [set-env, folly]
     strategy:
       fail-fast: false
       matrix:
@@ -132,7 +132,7 @@ jobs:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
   fbthrift:
-    needs: set-env
+    needs: [set-env, wangle]
     strategy:
       fail-fast: false
       matrix:

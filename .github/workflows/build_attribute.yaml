@@ -35,7 +35,8 @@ jobs:
       - uses: actions/checkout@v3.5.3
       - name: Build package
         run: |
-          cachix_token=${{ secrets.CACHIX_AUTH_TOKEN }} docker buildx build \
+          export cachix_token=${{ secrets.cachixAuthToken }}
+          docker buildx build \
             --cache-to type=gha,mode=max \
             --cache-from type=gha \
             --secret id=cachix_token \

@@ -111,7 +111,7 @@ jobs:
     with:
       cacheName: ${{ needs.set-env.outputs.CACHIX_CACHE_NAME }}
       platform: ${{ matrix.platform }}
-      attribute: fbthrift
+      attribute: fizz
     secrets:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
@@ -127,7 +127,7 @@ jobs:
     with:
       cacheName: ${{ needs.set-env.outputs.CACHIX_CACHE_NAME }}
       platform: ${{ matrix.platform }}
-      attribute: fbthrift
+      attribute: wangle
     secrets:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 

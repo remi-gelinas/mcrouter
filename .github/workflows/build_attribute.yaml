@@ -41,6 +41,6 @@ jobs:
             --secret id=cachix_token \
             --platform=${{ inputs.platform }} \
             --build-arg CACHE_NAME=${{ inputs.cacheName }} \
-            --build-arg ATTRIBUTE=${{ inputs.attribute }} \
+            --build-arg FLAKE_ATTRIBUTE=${{ inputs.attribute }} \
             --target cache_package \
             .

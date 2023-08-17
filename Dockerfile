@@ -24,12 +24,12 @@ RUN cachix use ${CACHE_NAME}
 COPY . ${WORKDIR}
 
 FROM base as package
-ARG ATTRIBUTE
-RUN nix build -L .#${ATTRIBUTE}
+ARG FLAKE_ATTRIBUTE
+RUN nix build -L .#${FLAKE_ATTRIBUTE}
 
 FROM package as cache_package
 RUN --mount=type=secret,id=cachix_token \
-        nix-store -qR --include-outputs $(nix-store -qd $(nix build -L .#${PACKAGE_NAME} --print-out-paths)) \
+        nix-store -qR --include-outputs $(nix-store -qd $(nix build -L .#${FLAKE_ATTRIBUTE} --print-out-paths)) \
         | grep -v '\.drv$' \
         | CACHIX_AUTH_TOKEN=$(cat /run/secrets/cachix_token) cachix push ${CACHE_NAME}
 

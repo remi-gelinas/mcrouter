@@ -39,6 +39,7 @@
 in
   fastStdenv.mkDerivation rec {
     inherit (source) pname version src;
+    __contentAddressed = true;
 
     sourceRoot = "source/mcrouter";
 

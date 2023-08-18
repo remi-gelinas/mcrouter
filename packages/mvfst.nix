@@ -16,6 +16,7 @@
 }:
 fastStdenv.mkDerivation rec {
   inherit (source) pname version src;
+  __contentAddressed = true;
 
   nativeBuildInputs = [
     cmake

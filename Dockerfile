@@ -7,7 +7,7 @@ ARG WORKDIR=/wrk
 WORKDIR ${WORKDIR}
 
 # Support new CLI and flakes
-RUN echo "extra-experimental-features = nix-command flakes" >> /etc/nix/nix.conf
+RUN echo "extra-experimental-features = nix-command flakes ca-derivations" >> /etc/nix/nix.conf
 
 # Support Darwin hosts
 RUN echo "filter-syscalls = false" >> /etc/nix/nix.conf

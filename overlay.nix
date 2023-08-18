@@ -10,7 +10,8 @@ final: prev: {
 
   folly = (prev.folly.override {stdenv = final.fastStdenv;}).overrideAttrs (_: {
     inherit (final.sources.folly) pname version src;
-    __contentAddressed = true;
+    # https://github.com/cachix/cachix/issues/373
+    # __contentAddressed = true;
 
     buildInputs = with final; [
       boost
@@ -43,7 +44,8 @@ final: prev: {
     inherit (final.stdenv) isAarch64;
   in {
     inherit (final.sources.fizz) pname version src;
-    __contentAddressed = true;
+    # https://github.com/cachix/cachix/issues/373
+    # __contentAddressed = true;
 
     buildInputs = with final; [
       fmt_9
@@ -68,7 +70,8 @@ final: prev: {
 
   wangle = (prev.wangle.override {stdenv = final.fastStdenv;}).overrideAttrs (_: {
     inherit (final.sources.wangle) pname version src;
-    __contentAddressed = true;
+    # https://github.com/cachix/cachix/issues/373
+    # __contentAddressed = true;
 
     buildInputs = with final; [
       fmt_9
@@ -90,7 +93,8 @@ final: prev: {
 
   fbthrift = (prev.fbthrift.override {stdenv = final.fastStdenv;}).overrideAttrs (_: {
     inherit (final.sources.fbthrift) pname version src;
-    __contentAddressed = true;
+    # https://github.com/cachix/cachix/issues/373
+    # __contentAddressed = true;
 
     nativeBuildInputs = with final; [
       makeWrapper

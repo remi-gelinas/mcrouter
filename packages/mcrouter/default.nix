@@ -39,7 +39,8 @@
 in
   fastStdenv.mkDerivation rec {
     inherit (source) pname version src;
-    __contentAddressed = true;
+    # https://github.com/cachix/cachix/issues/373
+    # __contentAddressed = true;
 
     sourceRoot = "source/mcrouter";
 

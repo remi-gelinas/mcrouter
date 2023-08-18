@@ -164,7 +164,7 @@ jobs:
       cachixAuthToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
   mcrouter:
-    needs: [fbthrift, mvfst, wangle, fizz, folly]
+    needs: [set-env, fbthrift, mvfst, wangle, fizz, folly]
     strategy:
       fail-fast: false
       matrix:
